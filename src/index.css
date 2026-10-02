@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    touch-action: pan-y;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-200 antialiased font-sans;
+  }
+}
+
+.dark body {
+  @apply bg-slate-950 text-slate-100;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast button, 
+.high-contrast a, 
+.high-contrast input, 
+.high-contrast select {
+  border: 2px solid #ffffff !important;
+}
+
+/* Font Size Scaling Classes */
+.text-size-large {
+  font-size: 1.125rem;
+}
+
+.text-size-xlarge {
+  font-size: 1.25rem;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Easy Reading Mode styles */
+.easy-reading-mode {
+  font-size: 1.2rem !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
