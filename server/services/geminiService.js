@@ -11,17 +11,17 @@ const getApiKey = () => {
 };
 
 const getModelName = () => {
-  return process.env.AI_MODEL || 'gemini-3.6-flash';
+  return process.env.AI_MODEL || 'gemini-2.5-flash';
 };
 
 // Available Gemini models list
 const MODEL_FALLBACKS = [
   getModelName(),
-  'gemini-3.6-flash',
   'gemini-2.5-flash',
-  'gemini-3.5-flash',
-  'gemini-flash-latest',
-  'gemini-flash-lite-latest'
+  'gemini-1.5-flash',
+  'gemini-2.0-flash-exp',
+  'gemini-1.5-pro',
+  'gemini-3.6-flash'
 ];
 
 /**
